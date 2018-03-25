@@ -42,8 +42,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Select Player"
-                android:layout_marginRight="40dp"/>
+                android:text="Select Player" />
 
             <Button
                 android:id="@+id/player_one"
@@ -57,6 +56,25 @@
                 android:text="O"
                 android:entries="@array/board_type_array"
                 android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Play Mode" />
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:entries="@array/play_mode_array"/>
         </LinearLayout>
 
 
