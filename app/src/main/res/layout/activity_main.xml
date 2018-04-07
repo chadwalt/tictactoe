@@ -47,14 +47,13 @@
             <Button
                 android:id="@+id/player_one"
                 android:layout_width="wrap_content"
-                android:text="X"
-                android:entries="@array/board_type_array"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="X" />
+
             <Button
                 android:id="@+id/player_two"
                 android:layout_width="wrap_content"
                 android:text="O"
-                android:entries="@array/board_type_array"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
 
@@ -76,6 +75,76 @@
                 android:layout_height="wrap_content"
                 android:entries="@array/play_mode_array"/>
         </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <TableRow>
+                <TextView
+                    android:text="X"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:padding="3dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:text="O"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:padding="3dip"
+                    android:gravity="center"/>
+                <TextView
+                    android:text="O"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:padding="3dip"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="X"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:padding="3dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:text="O"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:padding="3dip"
+                    android:gravity="center"/>
+                <TextView
+                    android:text="O"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:padding="3dip"
+                    android:gravity="center"/>
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:text="X"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:padding="3dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:text="O"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:padding="3dip"
+                    android:gravity="center"/>
+                <TextView
+                    android:text="O"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:padding="3dip"
+                    android:gravity="center"/>
+            </TableRow>
+
+        </TableLayout>
 
 
 

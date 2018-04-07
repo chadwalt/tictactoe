@@ -10,4 +10,6 @@
         <item>Play with app</item>
         <item>Play with another player</item>
     </string-array>
+
+    <string name="player_one">Player One</string>
 </resources>
