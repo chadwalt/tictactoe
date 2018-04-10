@@ -1,155 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.tictactoe.MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/selectBoardTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Select Board"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+    <Spinner
+        android:id="@+id/boardType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="20dp"
+        android:entries="@array/board_type_array"
+        app:layout_constraintStart_toEndOf="@+id/selectBoardTextView"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Select Board" />
+    <TextView
+        android:id="@+id/selectPlayerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Select Player"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectBoardTextView" />
 
-            <Spinner
-                android:id="@+id/board_type"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:entries="@array/board_type_array"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+    <Button
+        android:id="@+id/player_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:text="X"
+        app:layout_constraintStart_toEndOf="@id/selectPlayerTextView"
+        app:layout_constraintTop_toBottomOf="@id/boardType" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp">
+    <Button
+        android:id="@+id/player_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="O"
+        app:layout_constraintStart_toEndOf="@id/player_one"
+        app:layout_constraintTop_toBottomOf="@id/boardType" />
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Select Player" />
+    <TextView
+        android:id="@+id/playModeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Play Mode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectPlayerTextView" />
 
-            <Button
-                android:id="@+id/player_one"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="X" />
+    <Spinner
+        android:id="@+id/selectPlayMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
+        android:entries="@array/play_mode_array"
+        app:layout_constraintStart_toEndOf="@id/playModeTextView"
+        app:layout_constraintTop_toBottomOf="@id/player_one" />
 
-            <Button
-                android:id="@+id/player_two"
-                android:layout_width="wrap_content"
-                android:text="O"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+    <GridLayout
+        android:id="@+id/playBoard"
+        android:layout_width="350dp"
+        android:layout_height="225dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:columnCount="3"
+        android:gravity="center"
+        android:rowCount="3"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playModeTextView">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="30dp">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Play Mode" />
-
-            <Spinner
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:entries="@array/play_mode_array"/>
-        </LinearLayout>
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp">
-
-            <TableRow>
-                <TextView
-                    android:text="X"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:padding="3dp"
-                    android:gravity="center"/>
-                <TextView
-                    android:text="O"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:padding="3dip"
-                    android:gravity="center"/>
-                <TextView
-                    android:text="O"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:padding="3dip"
-                    android:gravity="center"/>
-            </TableRow>
-
-            <TableRow>
-                <TextView
-                    android:text="X"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:padding="3dp"
-                    android:gravity="center"/>
-                <TextView
-                    android:text="O"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:padding="3dip"
-                    android:gravity="center"/>
-                <TextView
-                    android:text="O"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:padding="3dip"
-                    android:gravity="center"/>
-            </TableRow>
-
-            <TableRow>
-                <TextView
-                    android:text="X"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:padding="3dp"
-                    android:gravity="center"/>
-                <TextView
-                    android:text="O"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:padding="3dip"
-                    android:gravity="center"/>
-                <TextView
-                    android:text="O"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:padding="3dip"
-                    android:gravity="center"/>
-            </TableRow>
-
-        </TableLayout>
+    </GridLayout>
 
 
 
-    </LinearLayout>
 
-
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

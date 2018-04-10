@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.board_type) Spinner board_type;
+//    @BindView(R.id.board_type) Spinner board_type;
     Context context;
     char playerSelected;
     CharSequence playerText;
